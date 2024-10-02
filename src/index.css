@@ -35,3 +35,22 @@ body{
     font-size: 2rem;
   }
 }
+
+@media screen and (min-width:300px) and (max-width:600px) {
+  /* body{
+    padding-left: 12px;
+    padding-right: 0px;
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }  
+  .foods{
+    min-width: 375px;
+  } */
+  .fonts-logos{
+    font-size: 1.3rem;
+  }
+}
