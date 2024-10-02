@@ -12,21 +12,24 @@ const Categories = ({ currency,restaurantData,exchange }) => {
   };
 
   return (
-    <div className="w-[482px] rounded-xl bg-white">
+    // parent container of each list 
+    <div className='flex flex-col gap-3'>
       {restaurantData.categories.map((category, index) => (
-        <div key={index} className="">
-          <div
+        /// each list of categories and items
+    <div key={index} className="lg:w-[482px] md:w-full rounded-lg bg-white  shadow-2xl foods">
+        <ul key={index *6} className="">
+          <li
             onClick={() => toggleCategory(index)}
-            className="max-w-full flex justify-between items-center px-3 cursor-pointer"
+            className="max-w-full flex justify-between items-center cursor-pointer px-4"
           >
-            <div className="flex gap-1 items-center py-2">
-              <span>
-                {openIndex === index ? <MdOutlineKeyboardArrowUp size={30} /> : <RiArrowRightWideFill size={30} />}
+            <div className="flex gap-1 items-center py-5 ">
+              <span className='fonts-logos'>
+                {openIndex === index ? <MdOutlineKeyboardArrowUp className='fonts-logos'  /> : <RiArrowRightWideFill className='fonts-logos' />}
               </span>
-              <h2 className="text-xl font-light">{category.categoryName}</h2>
+              <h2 className="lg:text-xl text-base font-light">{category.categoryName}</h2>
             </div>
-            <GiFullPizza size={30} />
-          </div>
+            <GiFullPizza className='text-[2rem]'  />
+          </li>
         
 
         {/*  */}
@@ -40,7 +43,8 @@ const Categories = ({ currency,restaurantData,exchange }) => {
               </div>
             ))
           )}
-        </div>
+        </ul>
+    </div>
       ))}
     </div>
   );

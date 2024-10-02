@@ -46,13 +46,13 @@ function App() {
   }
 
   return (
-    <>
+    <main className="">
       <Countries currency={currency}  onChangeCurrency={changeCurrency} />
-      <div className="flex items-center gap-4">
+      <div className="main flex items-center gap-4">
       <Restaurant onChangeCurrent={ChangeCurrent}  restaurants={data} restaurant={data} />
       <Categories exchange={exchange} currency={currency} restaurantData={restaurant} />
       </div>
-    </>
+    </main>
   )
 }
 
