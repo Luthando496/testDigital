@@ -13,10 +13,10 @@ const Categories = ({ currency,restaurantData,exchange }) => {
 
   return (
     // parent container of each list 
-    <div className='flex flex-col gap-3'>
+    <div className='flex flex-col gap-3 item-parent'>
       {restaurantData.categories.map((category, categoryIndex) => (
         /// each list of categories and items
-    <div key={categoryIndex} className="lg:w-[482px] md:w-full rounded-lg bg-white  shadow-2xl foods">
+    <div key={categoryIndex} className="lg:w-[482px] singleList rounded-lg bg-white  shadow-2xl foods">
         <ul key={categoryIndex *6} className="">
           <li
             onClick={() => toggleCategory(categoryIndex)}
